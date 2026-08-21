@@ -1,0 +1,47 @@
+name: Bản Tin Hằng Ngày
+
+on:
+  schedule:
+    - cron: "59 23 * * *"
+  workflow_dispatch:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-news
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Cài thư viện
+        run: pip install -r requirements-news.txt
+      - name: Chạy bản tin
+        env:
+          GMAIL_ADDRESS:  ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
+          NEWS_RECIPIENT: ${{ secrets.NEWS_RECIPIENT }}
+          SITE_URL:       ${{ vars.SITE_URL }}
+          TZ: Asia/Ho_Chi_Minh
+        run: python run_news_v2.py
+      - name: Đăng website
+        run: |
+          git config user.name  "bantin-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add docs
+          if git diff --cached --quiet; then
+            echo "Không có thay đổi."
+          else
+            git commit -m "📰 Bản tin $(TZ=Asia/Ho_Chi_Minh date +%d/%m/%Y) [skip ci]"
+            git push
+          fi
