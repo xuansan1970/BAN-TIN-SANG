@@ -11,6 +11,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+import socket
+
 import feedparser
 import requests
 from dateutil import parser as dateutil_parser
@@ -22,7 +24,8 @@ logger = logging.getLogger(__name__)
 
 SCRIPT_DIR = Path(__file__).parent
 SOURCES_FILE = SCRIPT_DIR / "sources.json"
-FEED_TIMEOUT = 15
+FEED_TIMEOUT = 12
+socket.setdefaulttimeout(20)  # chốt chặn cuối, không thư viện nào được treo vô hạn
 LINK_CHECK_TIMEOUT = 5
 HOURS_BACK = 36
 
@@ -108,11 +111,8 @@ def fetch_feed(source: dict) -> list:
         resp.raise_for_status()
         feed = feedparser.parse(resp.content)
     except Exception as e:
-        logger.warning(f"❌ {name}: {e}")
-        try:
-            feed = feedparser.parse(url)
-        except Exception:
-            return []
+        logger.warning(f"❌ {name}: bỏ qua ({str(e)[:60]})")
+        return []
 
     cutoff = datetime.now(timezone.utc) - timedelta(hours=HOURS_BACK)
     items = []
