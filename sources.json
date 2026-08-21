@@ -1,0 +1,96 @@
+{
+  "categories": {
+    "vn_hot": {
+      "name": "🔥 Tin Nóng & Xã Hội",
+      "max_articles": 12,
+      "layout": "grid",
+      "accent": "#ef4444",
+      "sources": [
+        {"name": "VnExpress", "url": "https://vnexpress.net/rss/tin-moi-nhat.rss", "lang": "vi"},
+        {"name": "Tuổi Trẻ", "url": "https://tuoitre.vn/rss/tin-moi-nhat.rss", "lang": "vi"},
+        {"name": "Dân Trí", "url": "https://dantri.com.vn/rss/home.rss", "lang": "vi"},
+        {"name": "Thanh Niên", "url": "https://thanhnien.vn/rss/home.rss", "lang": "vi"},
+        {"name": "Tiền Phong", "url": "https://www.tienphong.vn/rss/toan-quoc.rss", "lang": "vi"},
+        {"name": "Người Lao Động", "url": "https://nld.com.vn/rss/home.rss", "lang": "vi"},
+        {"name": "Pháp Luật TP.HCM", "url": "https://plo.vn/rss/home.rss", "lang": "vi"},
+        {"name": "VietNamNet", "url": "https://vietnamnet.vn/rss/giao-duc.rss", "lang": "vi"},
+        {"name": "Kenh14", "url": "https://kenh14.vn/rss/home.rss", "lang": "vi"},
+        {"name": "Cafebiz", "url": "https://cafebiz.vn/rss/home.rss", "lang": "vi"}
+      ]
+    },
+    "vn_tech": {
+      "name": "💻 Công Nghệ & AI",
+      "max_articles": 10,
+      "layout": "list",
+      "accent": "#06b6d4",
+      "sources": [
+        {"name": "GenK", "url": "https://genk.vn/rss/home.rss", "lang": "vi"},
+        {"name": "Tinh Tế", "url": "https://tinhte.vn/rss", "lang": "vi"},
+        {"name": "GenK Mobile", "url": "https://genk.vn/rss/mobile.rss", "lang": "vi"},
+        {"name": "VnExpress Số Hóa", "url": "https://vnexpress.net/rss/so-hoa.rss", "lang": "vi"},
+        {"name": "Sforum", "url": "https://sforum.vn/feed", "lang": "vi"},
+        {"name": "Thanh Niên Công Nghệ", "url": "https://thanhnien.vn/rss/cong-nghe.rss", "lang": "vi"},
+        {"name": "Tuổi Trẻ Công Nghệ", "url": "https://tuoitre.vn/rss/nhip-song-so.rss", "lang": "vi"},
+        {"name": "Zing Công Nghệ", "url": "https://znews.vn/rss/cong-nghe.rss", "lang": "vi"},
+        {"name": "Dân Trí Công Nghệ", "url": "https://dantri.com.vn/rss/suc-manh-so.rss", "lang": "vi"}
+      ]
+    },
+    "vn_economy": {
+      "name": "📈 Kinh Tế & Thị Trường",
+      "max_articles": 8,
+      "layout": "list",
+      "accent": "#22c55e",
+      "sources": [
+        {"name": "VnExpress Kinh Doanh", "url": "https://vnexpress.net/rss/kinh-doanh.rss", "lang": "vi"},
+        {"name": "Cafebiz", "url": "https://cafebiz.vn/rss/home.rss", "lang": "vi"},
+        {"name": "Tuổi Trẻ Kinh Tế", "url": "https://tuoitre.vn/rss/kinh-doanh.rss", "lang": "vi"},
+        {"name": "Dân Trí Kinh Doanh", "url": "https://dantri.com.vn/rss/kinh-doanh.rss", "lang": "vi"},
+        {"name": "Thanh Niên Kinh Tế", "url": "https://thanhnien.vn/rss/kinh-te.rss", "lang": "vi"},
+        {"name": "Tiền Phong Kinh Tế", "url": "https://www.tienphong.vn/rss/kinh-te.rss", "lang": "vi"},
+        {"name": "Người Lao Động KT", "url": "https://nld.com.vn/rss/kinh-te.rss", "lang": "vi"}
+      ]
+    },
+    "vn_science": {
+      "name": "🔬 Khoa Học & Khám Phá",
+      "max_articles": 7,
+      "layout": "list",
+      "accent": "#a78bfa",
+      "sources": [
+        {"name": "VnExpress Khoa Học", "url": "https://vnexpress.net/rss/khoa-hoc.rss", "lang": "vi"},
+        {"name": "VnExpress Sức Khỏe", "url": "https://vnexpress.net/rss/suc-khoe.rss", "lang": "vi"},
+        {"name": "Dân Trí Khoa Học", "url": "https://dantri.com.vn/rss/khoa-hoc-cong-nghe.rss", "lang": "vi"},
+        {"name": "Tuổi Trẻ Khoa Học", "url": "https://tuoitre.vn/rss/khoa-hoc.rss", "lang": "vi"},
+        {"name": "Thanh Niên Sức Khỏe", "url": "https://thanhnien.vn/rss/suc-khoe.rss", "lang": "vi"},
+        {"name": "Dân Trí Sức Khỏe", "url": "https://dantri.com.vn/rss/suc-khoe.rss", "lang": "vi"}
+      ]
+    },
+    "vn_world": {
+      "name": "🌍 Tin Thế Giới",
+      "max_articles": 7,
+      "layout": "list",
+      "accent": "#3b82f6",
+      "sources": [
+        {"name": "VnExpress Thế Giới", "url": "https://vnexpress.net/rss/the-gioi.rss", "lang": "vi"},
+        {"name": "Tuổi Trẻ Thế Giới", "url": "https://tuoitre.vn/rss/the-gioi.rss", "lang": "vi"},
+        {"name": "Thanh Niên Thế Giới", "url": "https://thanhnien.vn/rss/the-gioi.rss", "lang": "vi"},
+        {"name": "Dân Trí Thế Giới", "url": "https://dantri.com.vn/rss/the-gioi.rss", "lang": "vi"},
+        {"name": "Zing Thế Giới", "url": "https://znews.vn/rss/the-gioi.rss", "lang": "vi"},
+        {"name": "BBC Tiếng Việt", "url": "https://feeds.bbci.co.uk/vietnamese/rss.xml", "lang": "vi"}
+      ]
+    },
+    "vn_weird": {
+      "name": "🤩 Điều Hay & Lạ",
+      "max_articles": 6,
+      "layout": "grid",
+      "accent": "#f59e0b",
+      "sources": [
+        {"name": "VnExpress Khoa Học", "url": "https://vnexpress.net/rss/khoa-hoc.rss", "lang": "vi"},
+        {"name": "GenK", "url": "https://genk.vn/rss/home.rss", "lang": "vi"},
+        {"name": "Tinh Tế", "url": "https://tinhte.vn/rss", "lang": "vi"},
+        {"name": "Dân Trí", "url": "https://dantri.com.vn/rss/home.rss", "lang": "vi"},
+        {"name": "VnExpress", "url": "https://vnexpress.net/rss/tin-moi-nhat.rss", "lang": "vi"},
+        {"name": "Tuổi Trẻ", "url": "https://tuoitre.vn/rss/tin-moi-nhat.rss", "lang": "vi"}
+      ]
+    }
+  }
+}
