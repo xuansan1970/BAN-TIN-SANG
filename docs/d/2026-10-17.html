@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>BẢN TIN HẰNG NGÀY · 17/10/2026</title>
+<meta name="description" content="Bản tin tổng hợp Thứ Bảy, 17/10/2026 — 50 tin chọn lọc từ hơn 40 nguồn báo chính thống.">
+<meta name="theme-color" content="#080b14">
+<meta property="og:title" content="BẢN TIN HẰNG NGÀY · 17/10/2026">
+<meta property="og:description" content="50 tin chọn lọc sáng Thứ Bảy, 17/10/2026">
+<meta property="og:type" content="website">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icon.png">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --bg:#080b14; --surface:#11162a; --surface2:#1a2138; --line:#252d47;
+  --text:#f1f5f9; --muted:#94a3b8; --faint:#64748b;
+  --brand:#4f8cff; --brand2:#a78bfa;
+  --shadow:0 10px 30px rgba(0,0,0,.45);
+  --radius:16px;
+  --font:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Arial,sans-serif;
+}
+html[data-theme=light]{
+  --bg:#f6f7fb; --surface:#ffffff; --surface2:#eef1f8; --line:#dfe4f0;
+  --text:#0f172a; --muted:#51607a; --faint:#7c8aa3;
+  --shadow:0 10px 28px rgba(15,23,42,.10);
+}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);
+  line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+
+/* ── Thanh trên cùng ─────────────────────────────────────── */
+.topbar{position:sticky;top:0;z-index:50;backdrop-filter:saturate(160%) blur(14px);
+  -webkit-backdrop-filter:saturate(160%) blur(14px);
+  background:color-mix(in srgb,var(--bg) 82%,transparent);
+  border-bottom:1px solid var(--line)}
+.rainbow{height:3px;background:linear-gradient(90deg,#ff5470,#fbbf24,#34d399,#22d3ee,#a78bfa)}
+.tb-in{display:flex;align-items:center;gap:14px;padding:12px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.logo{width:34px;height:34px;border-radius:10px;flex:0 0 auto;
+  background:linear-gradient(135deg,var(--brand),var(--brand2));
+  display:grid;place-items:center;font-size:17px}
+.brand h1{margin:0;font-size:15.5px;font-weight:800;letter-spacing:-.2px;white-space:nowrap}
+.brand small{display:block;font-size:11px;font-weight:500;color:var(--faint);letter-spacing:.2px}
+.search{flex:1 1 240px;min-width:170px;position:relative}
+.search input{width:100%;padding:10px 14px 10px 38px;border-radius:99px;
+  background:var(--surface2);border:1px solid var(--line);color:var(--text);
+  font-size:14px;outline:none;transition:border-color .18s,box-shadow .18s}
+.search input:focus{border-color:var(--brand);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 22%,transparent)}
+.search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);opacity:.5}
+.tools{display:flex;gap:7px;flex:0 0 auto}
+.icobtn{width:38px;height:38px;border-radius:11px;background:var(--surface2);
+  border:1px solid var(--line);display:grid;place-items:center;font-size:15px;
+  transition:transform .16s,background .16s,border-color .16s}
+.icobtn:hover{transform:translateY(-2px);border-color:var(--brand)}
+.icobtn[aria-pressed=true]{background:linear-gradient(135deg,var(--brand),var(--brand2));
+  border-color:transparent;color:#fff}
+
+/* ── Chip lọc ────────────────────────────────────────────── */
+.chips{display:flex;gap:8px;padding:2px 0 12px;overflow-x:auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{white-space:nowrap;padding:8px 14px;border-radius:99px;font-size:13px;font-weight:600;
+  background:var(--surface2);border:1px solid var(--line);color:var(--muted);
+  transition:transform .16s,color .16s,border-color .16s}
+.chip:hover{transform:translateY(-1px);color:var(--text)}
+.chip[aria-pressed=true]{color:#07101f;border-color:transparent;
+  background:var(--c,var(--brand))}
+html[data-theme=light] .chip[aria-pressed=true]{color:#fff}
+
+/* ── Hero ────────────────────────────────────────────────── */
+.hero{padding:26px 0 6px}
+.hero h2{margin:0;font-size:clamp(26px,5vw,40px);font-weight:800;letter-spacing:-1px;line-height:1.1}
+.hero .sub{margin-top:9px;color:var(--faint);font-size:14px}
+.stats{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.stat{padding:7px 13px;border-radius:99px;background:var(--surface2);
+  border:1px solid var(--line);font-size:12px;font-weight:600}
+.weather{margin-top:18px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;
+  padding:16px 18px;border-radius:var(--radius);background:var(--surface);
+  border:1px solid var(--line)}
+.wtemp{font-size:32px;font-weight:800;background:linear-gradient(135deg,#7dd3fc,#a78bfa);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.wtips{display:flex;gap:8px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
+.wtips span{padding:5px 10px;border-radius:8px;background:var(--surface2)}
+
+/* ── Điểm tin 60 giây ────────────────────────────────────── */
+.digest{margin:26px 0 8px;padding:20px;border-radius:var(--radius);
+  background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow)}
+.digest h3{margin:0 0 4px;font-size:15px;font-weight:800;letter-spacing:.4px}
+.digest p{margin:0 0 14px;font-size:12.5px;color:var(--faint)}
+.dlist{display:grid;gap:2px}
+.ditem{display:flex;gap:12px;padding:11px 0;border-top:1px solid var(--line);align-items:flex-start}
+.ditem:first-child{border-top:0}
+.dnum{flex:0 0 auto;width:23px;height:23px;border-radius:7px;font-size:12px;font-weight:800;
+  display:grid;place-items:center;color:#07101f;background:var(--c,var(--brand))}
+.ditem .t{font-size:14.5px;font-weight:600;line-height:1.45}
+.ditem .s{margin-top:3px;font-size:11.5px;font-weight:600;color:var(--c,var(--brand))}
+
+/* ── Lưới tin ────────────────────────────────────────────── */
+.secthead{display:flex;align-items:center;gap:12px;margin:34px 0 16px}
+.secthead .bar{width:4px;height:22px;border-radius:99px;background:var(--c,var(--brand))}
+.secthead h3{margin:0;font-size:19px;font-weight:800;letter-spacing:-.3px}
+.secthead .n{margin-left:auto;font-size:12px;font-weight:700;color:var(--c,var(--brand))}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(290px,1fr))}
+.card{position:relative;display:flex;flex-direction:column;border-radius:var(--radius);
+  background:var(--surface);border:1px solid var(--line);overflow:hidden;
+  transition:transform .2s cubic-bezier(.2,.8,.3,1),border-color .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--c,var(--brand)) 55%,var(--line));
+  box-shadow:var(--shadow)}
+.thumb{position:relative;aspect-ratio:16/9;background:var(--surface2);overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform .45s cubic-bezier(.2,.8,.3,1)}
+.card:hover .thumb img{transform:scale(1.05)}
+.ph{width:100%;height:100%;display:grid;place-items:center;text-align:center;color:#fff}
+.ph b{display:block;font-size:26px;font-weight:800;letter-spacing:1px;opacity:.94}
+.ph span{display:block;margin-top:3px;font-size:11px;font-weight:600;opacity:.62}
+.badge{position:absolute;left:10px;top:10px;padding:5px 10px;border-radius:99px;
+  font-size:11px;font-weight:700;color:#07101f;background:var(--c,var(--brand))}
+.cbody{padding:14px 15px 12px;display:flex;flex-direction:column;flex:1}
+.cbody h4{margin:0;font-size:15px;font-weight:650;line-height:1.42}
+.cbody .sum{margin-top:8px;font-size:13px;color:var(--muted);line-height:1.55;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.meta{margin-top:auto;padding-top:12px;display:flex;align-items:center;gap:8px;
+  font-size:11.5px;font-weight:600;color:var(--c,var(--brand))}
+.meta .dot{color:var(--faint);font-weight:400}
+.acts{display:flex;gap:4px;margin-left:auto}
+.act{width:29px;height:29px;border-radius:8px;display:grid;place-items:center;
+  font-size:13px;color:var(--faint);background:var(--surface2);
+  transition:color .16s,transform .16s}
+.act:hover{transform:translateY(-2px);color:var(--text)}
+.act[aria-pressed=true]{color:#fbbf24}
+.act.speaking{color:#34d399}
+
+/* ── Chế độ 5 phút ───────────────────────────────────────── */
+body.quick .grid,body.quick .secthead{display:none}
+body.quick .digest{margin-top:20px}
+body.quick .quickonly{display:block}
+.quickonly{display:none}
+.quickmsg{margin:20px 0;padding:16px 18px;border-radius:var(--radius);
+  background:var(--surface);border:1px dashed var(--line);color:var(--muted);font-size:13.5px}
+
+.empty{padding:60px 20px;text-align:center;color:var(--faint)}
+.empty b{display:block;font-size:17px;color:var(--text);margin-bottom:6px}
+
+/* ── Ngăn kéo lưu trữ ────────────────────────────────────── */
+.drawer{position:fixed;inset:0;z-index:80;display:none}
+.drawer[open]{display:block}
+.drawer .scrim{position:absolute;inset:0;background:rgba(4,7,15,.6);backdrop-filter:blur(3px)}
+.drawer .panel{position:absolute;right:0;top:0;bottom:0;width:min(340px,86vw);
+  background:var(--surface);border-left:1px solid var(--line);padding:22px;overflow-y:auto;
+  animation:slide .24s cubic-bezier(.2,.8,.3,1)}
+@keyframes slide{from{transform:translateX(24px);opacity:.4}to{transform:none;opacity:1}}
+.drawer h3{margin:0 0 14px;font-size:16px;font-weight:800}
+.dayrow{display:flex;justify-content:space-between;align-items:center;padding:11px 12px;
+  border-radius:11px;background:var(--surface2);margin-bottom:8px;font-size:13.5px;font-weight:600}
+.dayrow:hover{outline:1px solid var(--brand)}
+.dayrow em{font-style:normal;color:var(--faint);font-weight:500;font-size:12px}
+
+footer{margin:48px 0 40px;padding-top:22px;border-top:1px solid var(--line);
+  text-align:center;color:var(--faint);font-size:12.5px}
+footer b{color:var(--muted)}
+
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);opacity:0;
+  padding:11px 20px;border-radius:99px;background:var(--text);color:var(--bg);
+  font-size:13px;font-weight:650;z-index:99;pointer-events:none;
+  transition:opacity .22s,transform .22s}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+@media (max-width:640px){
+  .brand small{display:none}
+  .hero{padding-top:18px}
+  .grid{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="rainbow"></div>
+  <div class="wrap">
+    <div class="tb-in">
+      <a class="brand" href="../index.html">
+        <span class="logo">📰</span>
+        <span><h1>BẢN TIN HẰNG NGÀY</h1><small>Thứ Bảy, 17/10/2026</small></span>
+      </a>
+      <div class="search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+          <circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+        <input id="q" type="search" placeholder="Tìm trong 50 tin hôm nay…" autocomplete="off">
+      </div>
+      <div class="tools">
+        <button class="icobtn" id="quick" aria-pressed="false" title="Chế độ đọc nhanh 5 phút">⚡</button>
+        <button class="icobtn" id="saved" aria-pressed="false" title="Tin đã lưu">🔖</button>
+        <button class="icobtn" id="arch" title="Xem lại các ngày trước">🗓</button>
+        <button class="icobtn" id="theme" title="Sáng / Tối">🌙</button>
+      </div>
+    </div>
+    <div class="chips" id="chips"></div>
+  </div>
+</div>
+
+<main class="wrap">
+  <section class="hero">
+    <h2>Sáng nay có gì đáng đọc?</h2>
+    <div class="sub">Thứ Bảy, 17/10/2026 · Tổng hợp tự động từ hơn 40 nguồn báo chính thống</div>
+    <div class="stats">
+      <span class="stat">📊 50 tin chọn lọc</span>
+      <span class="stat">✅ Link đã kiểm tra</span>
+      <span class="stat">🖼 100% có ảnh minh hoạ</span>
+      <span class="stat">🇻🇳 Ưu tiên Việt Nam</span>
+    </div>
+    <div id="weather"></div>
+  </section>
+
+  <section class="digest" id="digest"></section>
+  <div class="quickmsg quickonly">Đang ở <b>chế độ đọc nhanh</b> — chỉ hiện điểm tin quan trọng nhất. Bấm ⚡ lần nữa để xem đầy đủ.</div>
+
+  <div id="sections"></div>
+  <div class="empty" id="empty" hidden><b>Không tìm thấy tin nào</b>Thử từ khoá khác hoặc bỏ bớt bộ lọc.</div>
+</main>
+
+<footer class="wrap">
+  <div><b>BẢN TIN HẰNG NGÀY</b> · cập nhật 09:16 17/10/2026</div>
+  <div style="margin-top:6px">Tự động tổng hợp mỗi sáng · Mọi liên kết đều đã được kiểm tra trước khi đăng</div>
+</footer>
+
+<div class="drawer" id="drawer">
+  <div class="scrim" data-close></div>
+  <div class="panel">
+    <h3>🗓 Xem lại các ngày trước</h3>
+    <div id="days"></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const DATA = [{"key":"vn_hot","name":"🔥 Tin Nóng & Xã Hội","short":"Tin nóng","emoji":"🔥","accent":"#ff5470","articles":[{"id":"vn_hot-1-l-nh-o-ng-nh-n-c-i-bi-u-qu-c-h-i-v-o-l-n","i":1,"title":"Lãnh đạo Đảng, Nhà nước, đại biểu Quốc hội vào lăng viếng Chủ tịch Hồ Chí Minh","link":"https://tuoitre.vn/lanh-dao-dang-nha-nuoc-dai-bieu-quoc-hoi-vao-lang-vieng-chu-tich-ho-chi-minh-100261017080646691.htm","summary":"Sáng 17-10, trước giờ khai mạc kỳ họp thứ 2, Quốc hội khóa XVI, lãnh đạo Đảng, Nhà nước, các đại biểu Quốc hội đến đặt vòng hoa, vào lăng viếng Chủ tịch Hồ Chí Minh.","source":"Tuổi Trẻ","time":"45 phút trước","thumbnail":"https://cdn2.tuoitre.vn/thumb_w/1200/471584752817336320/2026/10/17/qh1-1792198020554782261249-0-65-897-1500-crop-1792198040117670153926.jpg","hot":true,"ph":{"c1":"#4a2731","c2":"#a04a58","ini":"TT","src":"Tuổi Trẻ"}},{"id":"vn_hot-2-b-gi-o-d-c-si-t-l-m-ph-t-i-m-s-c-m-h-chu","i":2,"title":"Bộ Giáo dục siết lạm phát điểm số, cấm hạ chuẩn để tăng tỉ lệ tốt nghiệp giỏi, xuất sắc","link":"https://tuoitre.vn/bo-giao-duc-siet-lam-phat-diem-so-cam-ha-chuan-de-tang-ti-le-tot-nghiep-gioi-xuat-sac-100261017002811932.htm","summary":"Bộ Giáo dục yêu cầu các trường đại học đối chiếu điểm số với chuẩn đầu ra, phản hồi doanh nghiệp, không áp đặt tỉ lệ tốt nghiệp giỏi, xuất sắc.","source":"Tuổi Trẻ","time":"1 giờ trước","thumbnail":"https://cdn2.tuoitre.vn/thumb_w/1200/471584752817336320/2026/10/17/bang-tot-nghiep-ai-1792198415943988835551-35-0-995-1536-crop-17921984690982040266096.png","hot":true,"ph":{"c1":"#4a2731","c2":"#a04a58","ini":"TT","src":"Tuổi Trẻ"}},{"id":"vn_hot-3-i-bi-u-n-u-k-v-ng-c-a-ng-i-d-n-doanh-ng","i":3,"title":"Đại biểu nêu kỳ vọng của người dân, doanh nghiệp với Quốc hội: Sửa trúng điểm nghẽn, rõ trách nhiệm thực thi","link":"https://tuoitre.vn/dai-bieu-neu-ky-vong-cua-nguoi-dan-doanh-nghiep-voi-quoc-hoi-sua-trung-diem-nghen-ro-trach-nhiem-thuc-thi-100261017062346821.htm","summary":"Sáng nay (17-10), kỳ họp thứ 2, Quốc hội khóa XVI khai mạc với dự kiến 57 nội dung, nhóm nội dung được trình xem xét, quyết định.","source":"Tuổi Trẻ","time":"2 giờ trước","thumbnail":"https://cdn2.tuoitre.vn/thumb_w/1200/471584752817336320/2026/10/17/tran-anh-tuan1-1792192094801199842777-52-300-1382-2427-crop-17921952565161985294714.jpg","hot":false,"ph":{"c1":"#4a2731","c2":"#a04a58","ini":"TT","src":"Tuổi Trẻ"}},{"id":"vn_hot-4-ng-sau-nh-ng-h-p-ng-t-n-l-a-kh-ng-l-c-a","i":4,"title":"Đằng sau những hợp đồng tên lửa khổng lồ của Mỹ","link":"https://tuoitre.vn/dang-sau-nhung-hop-dong-ten-lua-khong-lo-cua-my-100261015154737856.htm","summary":"Các hợp đồng vũ khí giữa Bộ Quốc phòng Mỹ với các “ông lớn” như Raytheon, Lockheed Martin và Boeing trị giá bạc tỉ USD. Những hóa đơn chiến tranh này nói gì về tương lai?","source":"Tuổi Trẻ","time":"4 giờ trước","thumbnail":"https://cdn2.tuoitre.vn/thumb_w/1200/471584752817336320/2026/10/15/minh-hoa-cua-reuters-1792053071238371886555-0-0-450-720-crop-17920534867952033831494.png","hot":false,"ph":{"c1":"#4a2731","c2":"#a04a58","ini":"TT","src":"Tuổi Trẻ"}},{"id":"vn_hot-5-d-ng-ai-t-o-b-n-sao-microsoft-office-mi","i":5,"title":"Dùng AI tạo bản sao Microsoft Office miễn phí chạy trên trình duyệt","link":"https://thanhnien.vn/dung-ai-tao-ban-sao-microsoft-office-mien-phi-chay-tren-trinh-duyet-18526101708191974.htm","summary":"Bộ công cụ văn phòng miễn phí được 'vibe-coding' giống Microsoft Office và lưu toàn bộ tài liệu vào đường dẫn URL có gì đặc biệt?","source":"Thanh Niên","time":"7 giờ trước","thumbnail":"https://images2.thanhnien.vn/zoom/600_315/528068263637045248/2026/10/17/tnw-office-17922002008871609005167-51-0-956-1448-crop-17922002908451681896128.jpg","hot":false,"ph":{"c1":"#3b2f63","c2":"#6d4aa8","ini":"TN","src":"Thanh Niên"}},{"id":"vn_hot-6-xe-bay-c-a-tesla-b-nh-v-p-th-c-t-ra-sao","i":6,"title":"Xe bay của Tesla - 'bánh vẽ' đẹp, thực tế ra sao?","link":"https://tienphong.vn/xe-bay-cua-tesla-banh-ve-dep-thuc-te-ra-sao-post1885994.tpo","summary":"Đằng sau những lời giới thiệu mỹ miều từ Elon Musk là công nghệ không mới và rào cản thương mại hóa khổng lồ trên concept Tesla Roadster Rocket.","source":"Tiền Phong","time":"7 giờ trước","thumbnail":"https://cdn.tienphong.vn/images/MINTdPOZWvZH5JaehKAUkH-oSIro6cljqLF0yIsP8WFaioQkxq4uj3B7CLvihh_G/catclipgif.gif","hot":false,"ph":{"c1":"#2a2f4a","c2":"#5b6494","ini":"TP","src":"Tiền Phong"}},{"id":"vn_hot-7-gi-x-ng-d-u-h-m-nay-17-10-2026-d-u-brent","i":7,"title":"Giá xăng dầu hôm nay 17.10.2026: Dầu Brent tăng mạnh, chạm mốc 110 USD/thùng","link":"https://thanhnien.vn/gia-xang-dau-hom-nay-17102026-dau-brent-tang-manh-cham-moc-110-usd-thung-185261017050241777.htm","summary":"Dầu Brent chuẩn toàn cầu chạm mức 110 USD/thùng lần đầu tiên kể từ tháng 5 trong phiên giao dịch cuối tuần do lo ngại căng thẳng leo thang ở Trung Đông có thể thắt chặt nguồn cung hơn nữa. Trong nước, giá xăng sinh học E5 và E10 vừa được điều chỉnh giảm mạnh.","source":"Thanh Niên","time":"7 giờ trước","thumbnail":"https://images2.thanhnien.vn/zoom/600_315/528068263637045248/2026/10/17/xang-dau-reuters-1789348021048968332841-55-0-599-870-crop-1792201224414860651590.jpg","hot":false,"ph":{"c1":"#3b2f63","c2":"#6d4aa8","ini":"TN","src":"Thanh Niên"}},{"id":"vn_hot-8-samsung-y-m-nh-tri-n-khai-one-ui-9-cho-i","i":8,"title":"Samsung đẩy mạnh triển khai One UI 9 cho điện thoại tầm trung Galaxy A","link":"https://thanhnien.vn/samsung-day-manh-trien-khai-one-ui-9-cho-dien-thoai-tam-trung-galaxy-a-185261016113111385.htm","summary":"Người dùng Galaxy A37, A36 và A56 có thể kiểm tra bản cập nhật One UI 9 trong phần cài đặt, tùy tình trạng triển khai tại khu vực.","source":"Thanh Niên","time":"7 giờ trước","thumbnail":"https://images2.thanhnien.vn/zoom/600_315/528068263637045248/2026/10/16/tnw-1-1792124918416579613047-30-0-1016-1578-crop-1792124926422977571645-17921249416722017744928.jpg","hot":false,"ph":{"c1":"#3b2f63","c2":"#6d4aa8","ini":"TN","src":"Thanh Niên"}},{"id":"vn_hot-9-t-d-ch-n-o-m-c-u-tphcm-ng-ch-n-i-ban-t-m","i":9,"title":"Từ ổ dịch não mô cầu ở TPHCM: Đừng chờ nổi ban tím mới đến bệnh viện","link":"https://tienphong.vn/tu-o-dich-nao-mo-cau-o-tphcm-dung-cho-noi-ban-tim-moi-den-benh-vien-post1885984.tpo","summary":"Sau khi ghi nhận chùm ca bệnh não mô cầu liên quan đến 3 học sinh tại một Trường THCS trên địa bàn, trong đó, một học sinh 12 tuổi đã tử vong, hai trường hợp còn lại đang điều trị tại Bệnh viện Bệnh Nhiệt đới TPHCM, nhiều phụ huynh bắt đầu đưa con đến các trung tâm tiêm ch...","source":"Tiền Phong","time":"7 giờ trước","thumbnail":"https://cdn.tienphong.vn/images/vfxVTqNZg61oqW4AULbiy0Tki2miM6zCCB2NPFE5PPRB-9ayVoqCahMY4fld2nCmgQtB6WzjCxuuyaHUFUscvBV7Vo6tauO9DN-PDmBJBeI/tp-br_tiem-chung-nha-be-qua-tai1.png.webp","hot":false,"ph":{"c1":"#2a2f4a","c2":"#5b6494","ini":"TP","src":"Tiền Phong"}},{"id":"vn_hot-10-huy-ng-h-n-28-000-m-b-t-ng-x-y-c-u-v-m-p","i":10,"title":"Huy động hơn 28.000 m³ bê tông xây cầu vòm phá kỷ lục thế giới: Dài gần bằng cầu Long Biên, tiết kiệm hơn 80 triệu USD","link":"https://kenh14.vn/huy-dong-hon-28000-m-be-tong-xay-cau-vom-pha-ky-luc-the-gioi-dai-gan-bang-cau-long-bien-tiet-kiem-hon-80-trieu-usd-215261017074629939.chn","summary":"Với nhịp chính dài 600 m, công trình trở thành cầu vòm bê tông có nhịp lớn nhất thế giới.","source":"Kenh14","time":"42 phút trước","thumbnail":"https://img-6.kienthuc.net.vn/thumb_w/640/203337114487263232/2026/10/16/china-breaks-a-long-standing-engineering-barrier-new-concrete-arch-bridge-achiev-1792140421711513238453.jpg","hot":false,"ph":{"c1":"#3d2438","c2":"#8a4a6d","ini":"KE","src":"Kenh14"}},{"id":"vn_hot-11-ph-ng-b-nh-ph-c-c-a-ng-nai-k-u-g-i-doanh","i":11,"title":"Phường Bình Phước của Đồng Nai kêu gọi doanh nghiệp 'tái sinh' trụ sở dôi dư","link":"https://thanhnien.vn/phuong-binh-phuoc-cua-dong-nai-keu-goi-doanh-nghiep-tai-sinh-tru-so-doi-du-185261016212159572.htm","summary":"Phường Bình Phước (thành phố Đồng Nai) tổ chức xúc tiến đầu tư, kêu gọi các nhà đầu tư cùng giải 'bài toán' bỏ hoang trụ sở dôi dư, tránh lãng phí.","source":"Thanh Niên","time":"7 giờ trước","thumbnail":"https://images2.thanhnien.vn/zoom/600_315/528068263637045248/2026/10/16/edit-kha-2-1792158412515235336386-0-611-3368-6000-crop-17921584304241559924344.jpeg","hot":false,"ph":{"c1":"#3b2f63","c2":"#6d4aa8","ini":"TN","src":"Thanh Niên"}},{"id":"vn_hot-12-t-s-h-a-n-kh-t-v-ng-l-m-ch-c-ng-ngh","i":12,"title":"Từ số hóa đến khát vọng làm chủ công nghệ","link":"https://thanhnien.vn/tu-so-hoa-den-khat-vong-lam-chu-cong-nghe-185261009170605598.htm","summary":"Tìm kiếm sản phẩm, thanh toán, khám chữa bệnh, quản lý giao thông…, ngày nay gần như mọi lĩnh vực đều có sự hiện diện của robot và trí tuệ nhân tạo (AI). Không chỉ số hóa, nhiều doanh nghiệp Việt đã đưa AI vào sản phẩm, dịch vụ…, thậm chí làm chủ công nghệ.","source":"Thanh Niên","time":"7 giờ trước","thumbnail":"https://images2.thanhnien.vn/zoom/600_315/528068263637045248/2026/10/9/a1-17915400242492115438770-4-0-1284-2048-crop-17915400727241830896483.jpg","hot":false,"ph":{"c1":"#3b2f63","c2":"#6d4aa8","ini":"TN","src":"Thanh Niên"}}]},{"key":"vn_tech","name":"💻 Công Nghệ & AI","short":"Công nghệ","emoji":"💻","accent":"#22d3ee","articles":[{"id":"vn_tech-13-iphone-duo-v-a-ch-y-h-ng-b-h-t-gi-5-000","i":13,"title":"iPhone Duo vừa cháy hàng đã bị hét giá 5.000 USD trên eBay","link":"https://tinhte.vn/thread/iphone-duo-vua-chay-hang-da-bi-het-gia-5-000-usd-tren-ebay.4184778/","summary":"iPhone Duo vừa cháy hàng đã bị hét giá 5.000 USD trên eBay iPhone Duo vừa mở đặt trước ngày 16/10 thì chỉ vài phút sau, ngày giao hàng trên Apple Store online ở Mỹ đã lùi sang năm 2027, mọi...","source":"Tinh Tế","time":"7 giờ trước","thumbnail":"https://photo2.tinhte.vn/data/attachment-files/2026/10/9114636_img1.jpg","hot":false,"ph":{"c1":"#2b3a67","c2":"#4a5fc1","ini":"TT","src":"Tinh Tế"}},{"id":"vn_tech-14-iphone-duo-h-t-h-ng-nhi-u-n-c-t-b-y-gi-p","i":14,"title":"iPhone Duo hết hàng ở nhiều nước, đặt bây giờ phải chờ tới cuối tháng 1/2027","link":"https://tinhte.vn/thread/iphone-duo-het-hang-o-nhieu-nuoc-dat-bay-gio-phai-cho-toi-cuoi-thang-1-2027.4184789/","summary":"Apple vừa mở đặt trước iPhone Duo, mẫu iPhone gập đầu tiên, giá từ 1.999 USD. Chỉ sau vài phút, các phiên bản đều hết lượt giao sớm, và trên web Apple ở nhiều nước ngày giao hàng đã dời sang...","source":"Tinh Tế","time":"7 giờ trước","thumbnail":"https://photo2.tinhte.vn/data/attachment-files/2026/10/9114648_thumb-4x3.jpg","hot":false,"ph":{"c1":"#2b3a67","c2":"#4a5fc1","ini":"TT","src":"Tinh Tế"}},{"id":"vn_tech-15-m-c-m-chip-huawei-h-ng-l-i-nvidia-c-n-34","i":15,"title":"Mỹ cấm chip, Huawei hưởng lợi: Nvidia còn 34% thị trường Trung Quốc","link":"https://genk.vn/my-cam-chip-huawei-huong-loi-nvidia-con-34-thi-truong-trung-quoc-16526101707564533.chn","summary":"Các lệnh cấm xuất khẩu của Mỹ vốn được dựng lên để kìm hãm năng lực trí tuệ nhân tạo của Trung Quốc, nhưng kết quả trên thị trường lại đang đi theo hướng ngược lại.","source":"GenK","time":"16 phút trước","thumbnail":"https://genk.mediacdn.vn/139269124445442048/2026/10/17/photo2026-10-1617-07-55-1792198569936-17921985705191504653699.jpg","hot":false,"ph":{"c1":"#3d2438","c2":"#8a4a6d","ini":"GE","src":"GenK"}},{"id":"vn_tech-16-sony-ra-m-t-ba-m-y-nghe-nh-c-walkman-cao","i":16,"title":"Sony ra mắt ba máy nghe nhạc Walkman cao cấp mới, giá từ 1.900 USD đến gần 5.900 USD","link":"https://tinhte.vn/thread/sony-ra-mat-ba-may-nghe-nhac-walkman-cao-cap-moi-gia-tu-1-900-usd-den-gan-5-900-usd.4184541/","summary":"Sony giới thiệu Walkman NW-WM1ZM3, NW-WM1AM3 và NW-ZX900 với mạch âm thanh được nâng cấp, hỗ trợ DSD 11,2 MHz, màn hình lớn hơn và thời lượng pin lên đến 40 giờ. Ba mẫu máy nghe nhạc Walkman cao...","source":"Tinh Tế","time":"7 giờ trước","thumbnail":"https://photo2.tinhte.vn/data/attachment-files/2026/10/9114008_SONY-NW-WM1ZM30-WM1AM3-ZX900-1.jpg","hot":false,"ph":{"c1":"#2b3a67","c2":"#4a5fc1","ini":"TT","src":"Tinh Tế"}},{"id":"vn_tech-17-samsung-y-m-nh-tri-n-khai-one-ui-9-cho-i","i":17,"title":"Samsung đẩy mạnh triển khai One UI 9 cho điện thoại tầm trung Galaxy A","link":"https://thanhnien.vn/samsung-day-manh-trien-khai-one-ui-9-cho-dien-thoai-tam-trung-galaxy-a-185261016113111385.htm","summary":"Người d&ugrave;ng Galaxy A37, A36 v&agrave; A56 c&oacute; thể kiểm tra bản cập nhật One UI 9 trong phần c&agrave;i đặt, t&ugrave;y t&igrave;nh trạng triển khai tại khu vực.","source":"Thanh Niên Công Nghệ","time":"7 giờ trước","thumbnail":"https://images2.thanhnien.vn/zoom/600_315/528068263637045248/2026/10/16/tnw-1-1792124918416579613047-30-0-1016-1578-crop-1792124926422977571645-17921249416722017744928.jpg","hot":false,"ph":{"c1":"#1f3d33","c2":"#3d8a6b","ini":"TN","src":"Thanh Niên Công Nghệ"}},{"id":"vn_tech-18-gi-t-m-nh-v-i-gi-s-a-iphone-duo-ti-n-s-a","i":18,"title":"Giật mình với giá sửa iPhone Duo, tiền sửa cao nhất gần bằng mua iPhone 18 Pro Max mới","link":"https://genk.vn/giat-minh-voi-gia-sua-iphone-duo-tien-sua-cao-nhat-gan-bang-mua-iphone-18-pro-max-moi-165261017075512285.chn","summary":"Apple vừa công bố bảng giá sửa chữa ngoài bảo hành cho iPhone Duo. Mức phí cao nhất lên tới 1.499 USD (khoảng 39 triệu đồng), gần bằng giá một chiếc iPhone 18 Pro Max mới tại Việt Nam.","source":"GenK","time":"36 phút trước","thumbnail":"https://genk.mediacdn.vn/139269124445442048/2026/10/17/v6xbrenwybqxboitusf9wp-1200-80jpg-021929-1792198482471-17921984831952050156844.jpg","hot":false,"ph":{"c1":"#3d2438","c2":"#8a4a6d","ini":"GE","src":"GenK"}},{"id":"vn_tech-19-intel-c-cho-l-nh-n-lo-t-h-p-ng-c-chip-l","i":19,"title":"Intel được cho là đã nhận loạt hợp đồng đúc chip lớn từ Apple, NVIDIA, AMD và Google","link":"https://tinhte.vn/thread/intel-duoc-cho-la-da-nhan-loat-hop-dong-duc-chip-lon-tu-apple-nvidia-amd-va-google.4184532/","summary":"Intel được cho là đã nhận loạt hợp đồng đúc chip lớn từ Apple, NVIDIA, AMD và Google Báo cáo mới nhất từ các chuyên gia phân tích tại KeyBanc cho thấy mảng gia công bán dẫn Intel Foundry đang ghi...","source":"Tinh Tế","time":"7 giờ trước","thumbnail":"https://photo2.tinhte.vn/data/attachment-files/2026/10/9113976_Intel-14A-cover.jpg","hot":false,"ph":{"c1":"#2b3a67","c2":"#4a5fc1","ini":"TT","src":"Tinh Tế"}},{"id":"vn_tech-20-c-u-doanh-s-iphone-apple-g-n-ai-c-a-alib","i":20,"title":"Cứu doanh số iPhone, Apple gắn AI của Alibaba vào máy bán ở Trung Quốc","link":"https://genk.vn/cuu-doanh-so-iphone-apple-gan-ai-cua-alibaba-vao-may-ban-o-trung-quoc-165261017075338301.chn","summary":"Sau thời gian dài để khách hàng tại thị trường tỷ dân phải dùng những chiếc iPhone khuyết tính năng thông minh vì rào cản kiểm duyệt, Apple chuẩn bị tung bản cập nhật iOS 27.3 vào tháng 12 tới với lõi trí tuệ nhân tạo do Alibaba và Baidu cung cấp, nhưng vẫn phải cắt bỏ trợ lý ...","source":"GenK","time":"56 phút trước","thumbnail":"https://genk.mediacdn.vn/139269124445442048/2026/10/17/images-2-1792198379666-17921983820621914155579.jpeg","hot":false,"ph":{"c1":"#3d2438","c2":"#8a4a6d","ini":"GE","src":"GenK"}},{"id":"vn_tech-21-gi-i-m-m-n-tesla-roadster-i-l-n-ng-c-nh","i":21,"title":"Giải mã màn Tesla Roadster đi lộn ngược như thằn lằn: không hề mới !","link":"https://tinhte.vn/thread/giai-ma-man-tesla-roadster-di-lon-nguoc-nhu-than-lan-khong-he-moi.4184606/","summary":"Chiếc Tesla Roadster hoàn toàn mới vừa có màn ra mắt rất hoành tráng khi làm những điều không tưởng với một chiếc xe hơi như bay lộn nhào, đi trên một con đường lộn ngược và khả năng tăng tốc từ...","source":"Tinh Tế","time":"9 giờ trước","thumbnail":"https://photo2.tinhte.vn/data/attachment-files/2026/10/9114171_tesla-roadster-2026-lon-nguoc.jpg","hot":false,"ph":{"c1":"#2b3a67","c2":"#4a5fc1","ini":"TT","src":"Tinh Tế"}},{"id":"vn_tech-22-hyundai-palisade-hybrid-ch-t-gi-t-1-499","i":22,"title":"Hyundai Palisade Hybrid chốt giá từ 1,499 tỷ đồng tại Việt Nam","link":"https://tinhte.vn/thread/hyundai-palisade-hybrid-chot-gia-tu-1-499-ty-dong-tai-viet-nam.4184684/","summary":"Ngày 16/10/2026, Hyundai Thành Công Việt Nam công bố giá bán chính thức của Palisade Hybrid thế hệ mới tại Việt Nam. Xe có 3 phiên bản, giá bán lẻ khuyến nghị (đã gồm VAT) như sau: Palisade...","source":"Tinh Tế","time":"9 giờ trước","thumbnail":"https://photo2.tinhte.vn/data/attachment-files/2026/10/9114281_9114278-07.jpg","hot":false,"ph":{"c1":"#2b3a67","c2":"#4a5fc1","ini":"TT","src":"Tinh Tế"}}]},{"key":"vn_economy","name":"📈 Kinh Tế & Thị Trường","short":"Kinh tế","emoji":"📈","accent":"#34d399","articles":[{"id":"vn_economy-23-lotte-mart-18-n-m-ng-h-agrave-nh-c-ugrav","i":23,"title":"LOTTE MART: 18 năm đồng h&agrave;nh c&ugrave;ng người ti&ecirc;u d&ugrave;ng v&agrave; ng&agrave;nh b&aacute;n lẻ Việt Nam","link":"https://thanhnien.vn/lotte-mart-18-nam-dong-hanh-cung-nguoi-tieu-dung-va-nganh-ban-le-viet-nam-185261017081800126.htm","summary":"L&agrave; một trong những nh&agrave; b&aacute;n lẻ nước ngo&agrave;i ti&ecirc;n phong đầu tư v&agrave;o Việt Nam, h&agrave;nh tr&igrave;nh 18 năm của LOTTE MART gắn liền với giai đoạn chuyển m&igrave;nh, ph&aacute;t triển mạnh mẽ nhất của thị trường b&aacute;n lẻ trong nước.","source":"Thanh Niên Kinh Tế","time":"8 giờ trước","thumbnail":"https://images2.thanhnien.vn/zoom/600_315/528068263637045248/2026/10/17/1-17922001427181534382747-0-0-1531-2450-crop-1792200487186696207590.jpg","hot":false,"ph":{"c1":"#2a2f4a","c2":"#5b6494","ini":"TN","src":"Thanh Niên Kinh Tế"}},{"id":"vn_economy-24-bitcoin-r-t-y-m-t-th-ng-v-l-m-ph-t-n-ng","i":24,"title":"Bitcoin rớt đáy một tháng vì lạm phát nóng, nỗi lo Fed tăng lãi suất","link":"https://dantri.com.vn/kinh-doanh/bitcoin-rot-day-mot-thang-vi-lam-phat-nong-noi-lo-fed-tang-lai-suat-20261016235408529.htm","summary":"(Dân trí) - Sự trở lại bất ngờ của lạm phát Mỹ khiến kỳ vọng nới lỏng tiền tệ tan biến. Đồng tiền mã hóa lớn nhất thế giới lập tức rơi vào nhịp giằng co đầy bất an, kéo tụt tâm lý giới đầu tư.","source":"Dân Trí Kinh Doanh","time":"10 giờ trước","thumbnail":"https://icdn.dantri.com.vn/2026/10/16/bitcoin-2-cropped-1792169386276.jpg","hot":false,"ph":{"c1":"#42301c","c2":"#a06a32","ini":"DT","src":"Dân Trí Kinh Doanh"}},{"id":"vn_economy-25-v-sao-tphcm-c-n-si-u-n-ng-l-c-sau-s-p-nh","i":25,"title":"Vì sao TPHCM cần 'siêu năng lực' sau sáp nhập?","link":"https://tienphong.vn/vi-sao-tphcm-can-sieu-nang-luc-sau-sap-nhap-post1885776.tpo","summary":"Đang đứng trước cơ hội lớn để mở rộng không gian phát triển, trở thành trung tâm kinh tế tầm khu vực và quốc tế, TPHCM cần đột phá trong tư duy quy hoạch, đầu tư hạ tầng đồng bộ, huy động nguồn lực xã hội và chuyển đổi mô hình tăng trưởng dựa trên khoa học công nghệ. Tái diễn ...","source":"Tiền Phong Kinh Tế","time":"10 giờ trước","thumbnail":"https://cdn.tienphong.vn/images/vfxVTqNZg61oqW4AULbiyyHA9C5IRETN37UZY0Bos81gIl6QgIaWIZZcKUu3eaDmD7TVz4Bj2NUg7LNdUcCY6XreMJnEsSn4JlwGNqCG9E1FdBbscbvT9rqzYUX5Wv9qTm8dKG0g_-5V8mOKzGs6CN4fa3dDiQs7Kr1O9UGi4x3wyn6pVgTxgBtZCEJ-fwD-/1792129431667-2151371512137825466-484046697057078230-bc43ae2db7c7877f1e1ea36333253836.jpg.webp","hot":false,"ph":{"c1":"#1f3d33","c2":"#3d8a6b","ini":"TP","src":"Tiền Phong Kinh Tế"}},{"id":"vn_economy-26-fintech-xuy-n-bi-n-gi-i-nhi-u-i-m-ngh-n","i":26,"title":"Fintech xuyên biên giới: Nhiều 'điểm nghẽn' cần được khơi thông","link":"https://tuoitre.vn/fintech-xuyen-bien-gioi-nhieu-diem-nghen-can-duoc-khoi-thong-100261016180854113.htm","summary":"Thanh toán số tăng trưởng nhanh, mở ra cơ hội cho fintech tại Việt Nam. Nhưng để công nghệ phát huy hiệu quả, cần tháo gỡ các điểm nghẽn về pháp lý, kết nối ngân hàng và dữ liệu, những nền tảng quan trọng để ứng dụng AI.","source":"Tuổi Trẻ Kinh Tế","time":"12 giờ trước","thumbnail":"https://cdn2.tuoitre.vn/thumb_w/1200/471584752817336320/2026/10/16/2aobor5vjcxkgonl4d8hjv3zdzsop5tiknetxsxy-1792149271115474001127-904-327-1920-1952-crop-1792194488188658316044-33-51-1016-1625-crop-1792194505601626393593.jpg","hot":false,"ph":{"c1":"#123a4d","c2":"#1e6f8c","ini":"TT","src":"Tuổi Trẻ Kinh Tế"}},{"id":"vn_economy-27-c-ng-khai-12-d-n-u-ti-n-thu-h-t-u-t-ph-a","i":27,"title":"Công khai 12 dự án ưu tiên thu hút đầu tư ở phía bắc Đồng Nai, từ đô thị đến du lịch Suối Cam","link":"https://tuoitre.vn/cong-khai-12-du-an-uu-tien-thu-hut-dau-tu-o-phia-bac-dong-nai-tu-do-thi-den-du-lich-suoi-cam-100261016195437156.htm","summary":"Phường trung tâm ở phía bắc TP Đồng Nai công khai 12 dự án ưu tiên thu hút đầu tư giai đoạn 2026 - 2030, từ đô thị, nhà ở đến thương mại - dịch vụ, du lịch, hạ tầng xã hội và công nghiệp.","source":"Tuổi Trẻ Kinh Tế","time":"12 giờ trước","thumbnail":"https://cdn2.tuoitre.vn/thumb_w/1200/471584752817336320/2026/10/16/binh-phuoc-cong-khai-du-an-17921549952801076961140-83-223-819-1400-crop-1792194358683295965955.jpg","hot":false,"ph":{"c1":"#123a4d","c2":"#1e6f8c","ini":"TT","src":"Tuổi Trẻ Kinh Tế"}},{"id":"vn_economy-28-nh-s-n-xu-t-gi-b-m-t-th-nh-ph-n-h-a-ch-t","i":28,"title":"Nhà sản xuất giữ bí mật thành phần hóa chất, doanh nghiệp nhập khẩu cần làm gì?","link":"https://tuoitre.vn/nha-san-xuat-giu-bi-mat-thanh-phan-hoa-chat-doanh-nghiep-nhap-khau-can-lam-gi-100261016165824365.htm","summary":"Nhà sản xuất nước ngoài không công bố đầy đủ thành phần hóa chất vì lý do bảo mật, trong khi quy định yêu cầu doanh nghiệp phải khai báo chi tiết.","source":"Tuổi Trẻ Kinh Tế","time":"15 giờ trước","thumbnail":"https://cdn2.tuoitre.vn/thumb_w/1200/471584752817336320/2026/10/16/tempimagef4kedt-1792144549027878114575-31-0-487-730-crop-1792144602831969890275.jpg","hot":false,"ph":{"c1":"#123a4d","c2":"#1e6f8c","ini":"TT","src":"Tuổi Trẻ Kinh Tế"}},{"id":"vn_economy-29-h-n-1-000-ki-n-ngh-hi-n-k-c-a-doanh-nh-n","i":29,"title":"Hơn 1.000 kiến nghị, hiến kế của doanh nhân trẻ: 'Nóng' vấn đề thực thi chính sách, tiếp cận vốn, đất đai","link":"https://tuoitre.vn/hon-1000-kien-nghi-hien-ke-cua-doanh-nhan-tre-nong-van-de-thuc-thi-chinh-sach-tiep-can-von-dat-dai-100261016154618661.htm","summary":"Với 1.071 ý kiến của các doanh nhân tại các phiên đối thoại, các kiến nghị tập trung vào chất lượng thực thi thể chế và thủ tục hành chính, tiếp cận vốn, đất đai và mặt bằng sản xuất, phát triển hạ tầng, logistics và liên kết vùng...","source":"Tuổi Trẻ Kinh Tế","time":"16 giờ trước","thumbnail":"https://cdn2.tuoitre.vn/thumb_w/1200/471584752817336320/2026/10/16/hong-anh-1792140017138335373431-107-447-836-1613-crop-17921401949102145571364.jpg","hot":false,"ph":{"c1":"#123a4d","c2":"#1e6f8c","ini":"TT","src":"Tuổi Trẻ Kinh Tế"}},{"id":"vn_economy-30-trung-ng-t-m-c-ti-u-t-ng-tr-ng-gdp-n-m-2","i":30,"title":"Trung ương đặt mục tiêu tăng trưởng GDP năm 2027 từ 10% trở lên","link":"https://dantri.com.vn/kinh-doanh/trung-uong-dat-muc-tieu-tang-truong-gdp-nam-2027-tu-10-tro-len-20261016203534854.htm","summary":"(Dân trí) - Trung ương đặt mục tiêu tăng trưởng GDP năm 2027 từ 10% trở lên, đồng thời yêu cầu đa dạng nguồn vốn, giảm lãi suất và thúc đẩy đầu tư công.","source":"Dân Trí Kinh Doanh","time":"19 giờ trước","thumbnail":"https://icdn.dantri.com.vn/2026/10/16/tphcm-nhin-tu-tren-cao-bao-quyen-1792157452603.jpg","hot":false,"ph":{"c1":"#42301c","c2":"#a06a32","ini":"DT","src":"Dân Trí Kinh Doanh"}}]},{"key":"vn_science","name":"🔬 Khoa Học & Khám Phá","short":"Khoa học","emoji":"🔬","accent":"#c084fc","articles":[{"id":"vn_science-31-th-s-n-v-tr-t-i-euclid-s-p-h-l-b-n-h-ng","i":31,"title":"'Thợ săn vũ trụ tối' Euclid sắp hé lộ bản đồ hàng tỉ thiên hà","link":"https://tuoitre.vn/tho-san-vu-tru-toi-euclid-sap-he-lo-ban-do-hang-ti-thien-ha-100261016132042178.htm","summary":"Sứ mệnh Euclid lập bản đồ hàng tỉ thiên hà, tìm hiểu vật chất tối và năng lượng tối. Dữ liệu đầu tiên dự kiến công bố vào tháng 11-2026.","source":"Tuổi Trẻ Khoa Học","time":"1 giờ trước","thumbnail":"https://cdn2.tuoitre.vn/thumb_w/1200/471584752817336320/2026/10/16/kh-euclid-l-esa-1792131369742513319791-0-21-400-661-crop-17921313780451436923931.jpg","hot":false,"ph":{"c1":"#2a2f4a","c2":"#5b6494","ini":"TT","src":"Tuổi Trẻ Khoa Học"}},{"id":"vn_science-32-ch-i-m-c-k-t-trong-c-b-trai-su-t-6-th-n","i":32,"title":"Đồ chơi mắc kẹt trong cổ bé trai suốt 6 tháng","link":"https://dantri.com.vn/suc-khoe/do-choi-mac-ket-trong-co-be-trai-suot-6-thang-20261016115039443.htm","summary":"(Dân trí) - Dù nghi ngờ bé hóc dị vật từ 6 tháng trước, gia đình đưa trẻ đi khám nhiều nơi vẫn không tìm ra nguyên nhân. Đến khi phát hiện, dị vật đã đâm xuyên thành thực quản tạo thành ổ áp xe nguy hiểm.","source":"Dân Trí Sức Khỏe","time":"7 giờ trước","thumbnail":"https://icdn.dantri.com.vn/2026/10/16/di-vat-1792125881880.jpg","hot":false,"ph":{"c1":"#2a2f4a","c2":"#5b6494","ini":"DT","src":"Dân Trí Sức Khỏe"}},{"id":"vn_science-33-b-c-s-g-49-con-ong-m-c-tr-n-u-ng-i-ph-n","i":33,"title":"Bác sĩ gỡ 49 con ong mắc trên đầu người phụ nữ ở Nghệ An","link":"https://dantri.com.vn/suc-khoe/bac-si-go-49-con-ong-mac-tren-dau-nguoi-phu-nu-o-nghe-an-20261017065053274.htm","summary":"(Dân trí) - Trong lúc đi làm nương rẫy, hai vợ chồng ở Nghệ An không may va phải tổ ong, bị cả đàn tấn công. Các bác sĩ sau đó đã gỡ 49 con ong mắc trên đầu người vợ.","source":"Dân Trí Sức Khỏe","time":"8 giờ trước","thumbnail":"https://icdn.dantri.com.vn/2026/10/17/ong-tan-cong-hai-vo-chong-cropped-1792194459065.jpg","hot":false,"ph":{"c1":"#2a2f4a","c2":"#5b6494","ini":"DT","src":"Dân Trí Sức Khỏe"}},{"id":"vn_science-34-k-s-ph-n-c-ng-c-ng-c-n-hi-u-ph-n-m-m-ng","i":34,"title":"Kỹ sư phần cứng cũng cần hiểu phần mềm, người làm sản xuất phải biết phân tích dữ liệu","link":"https://tuoitre.vn/ky-su-phan-cung-cung-can-hieu-phan-mem-nguoi-lam-san-xuat-phai-biet-phan-tich-du-lieu-100261016175453068.htm","summary":"Theo chuyên gia, các trường đại học cần gắn việc đào tạo nhân lực công nghệ cao với nhu cầu thực tế của doanh nghiệp, để sinh viên được tham gia giải quyết những bài toán trong sản xuất, nghiên cứu.","source":"Tuổi Trẻ Khoa Học","time":"14 giờ trước","thumbnail":"https://cdn2.tuoitre.vn/thumb_w/1200/471584752817336320/2026/10/16/trang-ngan-17921472890212110504208-60-127-886-1448-crop-1792195058105621521744.png","hot":false,"ph":{"c1":"#2a2f4a","c2":"#5b6494","ini":"TT","src":"Tuổi Trẻ Khoa Học"}},{"id":"vn_science-35-chip-si-u-nh-d-ng-ai-s-n-t-m-d-u-hi-u-s","i":35,"title":"Chip siêu nhỏ dùng AI săn tìm dấu hiệu sự sống ngoài Trái đất","link":"https://tuoitre.vn/chip-sieu-nho-dung-ai-san-tim-dau-hieu-su-song-ngoai-trai-dat-100261016104551214.htm","summary":"Các nhà khoa học quốc tế phát triển một cảm biến điện tử có khả năng phát hiện dấu hiệu sự sống ngoài Trái đất, giúp đơn giản hóa các phương pháp phát hiện người ngoài hành tinh hiện nay.","source":"Tuổi Trẻ Khoa Học","time":"20 giờ trước","thumbnail":"https://cdn2.tuoitre.vn/thumb_w/1200/471584752817336320/2026/10/16/kh-sa-mac-atacama-17921221804881343950699-0-0-500-800-crop-17921221870831688799255.jpg","hot":false,"ph":{"c1":"#2a2f4a","c2":"#5b6494","ini":"TT","src":"Tuổi Trẻ Khoa Học"}},{"id":"vn_science-36-tphcm-ph-t-hi-n-3-h-c-sinh-m-c-n-o-m-c-u","i":36,"title":"TPHCM phát hiện 3 học sinh mắc não mô cầu, một ca đã tử vong","link":"https://dantri.com.vn/suc-khoe/tphcm-phat-hien-3-hoc-sinh-mac-nao-mo-cau-mot-ca-da-tu-vong-20261016163640950.htm","summary":"(Dân trí) - Sau khi ghi nhận 3 học sinh ở xã Hiệp Phước mắc bệnh não mô cầu nhóm B, trong đó một em đã tử vong, Sở Y tế TPHCM đã khẩn trương chỉ đạo các đơn vị phối hợp triển khai các biện pháp kiểm soát dịch.","source":"Dân Trí Sức Khỏe","time":"23 giờ trước","thumbnail":"https://icdn.dantri.com.vn/2026/03/23/nao-mo-cau-1-1774267557982.jpg","hot":false,"ph":{"c1":"#2a2f4a","c2":"#5b6494","ini":"DT","src":"Dân Trí Sức Khỏe"}},{"id":"vn_science-37-xu-t-lo-t-thay-i-v-kh-m-ch-a-b-nh-an-to","i":37,"title":"Đề xuất loạt thay đổi về khám chữa bệnh, an toàn thực phẩm, hiến tạng","link":"https://dantri.com.vn/suc-khoe/de-xuat-loat-thay-doi-ve-kham-chua-benh-an-toan-thuc-pham-hien-tang-20261016114722958.htm","summary":"(Dân trí) - Từ quản lý an toàn thực phẩm, mở rộng nguồn hiến tạng đến kiểm soát giá khám chữa bệnh và thuốc lá thế hệ mới, 4 dự án luật do Bộ Y tế chủ trì dự kiến được trình Quốc hội tại kỳ họp thứ 2, khóa XVI.","source":"Dân Trí Sức Khỏe","time":"1 ngày trước","thumbnail":"https://icdn.dantri.com.vn/2026/10/16/de-xuat-loat-thay-doi-ve-kham-chua-benh-an-toan-thuc-pham-hien-tang-cropped-1792125400461.jpg","hot":false,"ph":{"c1":"#2a2f4a","c2":"#5b6494","ini":"DT","src":"Dân Trí Sức Khỏe"}}]},{"key":"vn_world","name":"🌍 Tin Thế Giới","short":"Thế giới","emoji":"🌍","accent":"#60a5fa","articles":[{"id":"vn_world-38-katie-zacharia-r-i-gh-th-k-b-o-ch-nh-tr","i":38,"title":"Katie Zacharia rời ghế thư ký báo chí Nhà Trắng sau 5 ngày","link":"https://lifestyle.zingnews.vn/katie-zacharia-roi-ghe-thu-ky-bao-chi-nha-trang-sau-5-ngay-post1688930.html","summary":"Katie Zacharia, người được Tổng thống Donald Trump lựa chọn, đã rời vị trí thư ký báo chí Nhà Trắng hôm 16/10, sau 5 ngày làm việc.","source":"Zing Thế Giới","time":"7 giờ trước","thumbnail":"https://photo.znews.vn/w660/Uploaded/asfzyrwtys1/2026_10_15/Thu_ky_bao_chi_Nha_Trang.jpg","hot":false,"ph":{"c1":"#123a4d","c2":"#1e6f8c","ini":"ZT","src":"Zing Thế Giới"}},{"id":"vn_world-39-tin-t-c-qu-c-t-ng-agrave-y-17-10-quy-t-n","i":39,"title":"Tin tức quốc tế ng&agrave;y 17.10: Quyết định mới về Ukraine của Tổng thống Putin","link":"https://thanhnien.vn/tin-tuc-quoc-te-ngay-1710-tuyen-bo-moi-ve-ukraine-cua-tong-thong-putin-185261017074253848.htm","summary":"Một loạt th&ocirc;ng tin mới về xung đột Trung Đ&ocirc;ng, Nga - Ukraine... Thanh Ni&ecirc;n sẽ tiếp tục cập nhật c&aacute;c tin tức quốc tế trong ng&agrave;y 17.10.","source":"Thanh Niên Thế Giới","time":"8 giờ trước","thumbnail":"https://images2.thanhnien.vn/zoom/600_315/528068263637045248/2026/10/17/2026-10-16t163745z-496596247-rc2g4oa1bv57-rtrmadp-3-ukraine-crisis-russia-putin-17921983796711137614218-0-0-1125-1800-crop-17921983840311117687857.jpg","hot":false,"ph":{"c1":"#4a2731","c2":"#a04a58","ini":"TN","src":"Thanh Niên Thế Giới"}},{"id":"vn_world-40-i-u-g-khi-n-iphone-duo-ch-y-h-ng-sau-30","i":40,"title":"Điều gì khiến iPhone Duo cháy hàng sau 30 phút?","link":"https://lifestyle.zingnews.vn/dieu-gi-khien-iphone-duo-chay-hang-sau-30-phut-post1689970.html","summary":"Chỉ 30 phút sau khi mở đặt trước hôm 16/10, các phiên bản iPhone Duo, mẫu điện thoại gập đầu tiên của Apple, đã rơi vào tình trạng khan hàng, lùi lịch giao sang năm 2027.","source":"Zing Thế Giới","time":"9 giờ trước","thumbnail":"https://photo.znews.vn/w660/Uploaded/lepz/2026_10_16/iPhone_Duo_Open_1.jpg","hot":false,"ph":{"c1":"#123a4d","c2":"#1e6f8c","ini":"ZT","src":"Zing Thế Giới"}},{"id":"vn_world-41-ng-agrave-nh-aacute-nh-b-t-c-aacute-lao","i":41,"title":"Ng&agrave;nh đ&aacute;nh bắt c&aacute; lao đao v&igrave; si&ecirc;u El Nino","link":"https://thanhnien.vn/nganh-danh-bat-ca-lao-dao-vi-sieu-el-nino-185261016220339766.htm","summary":"Hiện tượng El Nino cực mạnh đang đe dọa nguồn c&aacute; cơm ngo&agrave;i khơi Peru, buộc nước n&agrave;y đ&igrave;nh chỉ khai th&aacute;c v&agrave; g&acirc;y ra những t&aacute;c động d&acirc;y chuyền đối với ng&agrave;nh thủy sản to&agrave;n cầu.","source":"Thanh Niên Thế Giới","time":"10 giờ trước","thumbnail":"https://images2.thanhnien.vn/zoom/600_315/528068263637045248/2026/10/16/photo-1792162867706-17921628688281912483919-17-0-767-1200-crop-17921628882332003110113.jpeg","hot":false,"ph":{"c1":"#4a2731","c2":"#a04a58","ini":"TN","src":"Thanh Niên Thế Giới"}},{"id":"vn_world-42-t-ng-th-ng-putin-l-nh-ti-p-t-c-t-n-c-ng","i":42,"title":"Tổng thống Putin lệnh tiếp tục tấn công, lập vùng đệm dọc biên giới Ukraine","link":"https://dantri.com.vn/the-gioi/tong-thong-putin-lenh-tiep-tuc-tan-cong-lap-vung-dem-doc-bien-gioi-ukraine-20261017010933992.htm","summary":"(Dân trí) - Tổng thống Vladimir Putin tuyên bố Nga đang thiết lập “vùng an ninh” bên trong lãnh thổ Ukraine dọc theo biên giới chung giữa hai nước.","source":"Dân Trí Thế Giới","time":"10 giờ trước","thumbnail":"https://icdn.dantri.com.vn/2026/10/17/putin-reuters-cropped-1792173945523.jpg","hot":false,"ph":{"c1":"#4a2731","c2":"#a04a58","ini":"DT","src":"Dân Trí Thế Giới"}},{"id":"vn_world-43-c-aacute-c-039-si-ecirc-u-d-aacute-n-039","i":43,"title":"C&aacute;c &#039;si&ecirc;u dự &aacute;n&#039; của &ocirc;ng Trump đối mặt nguy cơ ph&aacute; sản","link":"https://thanhnien.vn/cac-sieu-du-an-cua-ong-trump-doi-mat-nguy-co-pha-san-18526101622065186.htm","summary":"Kế hoạch chi ti&ecirc;u quốc ph&ograve;ng 1.500 tỉ USD của ch&iacute;nh quyền Tổng thống Mỹ Donald Trump c&oacute; thể bị chặn đứng nếu đảng D&acirc;n chủ gi&agrave;nh lại quyền kiểm so&aacute;t quốc hội sau bầu cử.","source":"Thanh Niên Thế Giới","time":"11 giờ trước","thumbnail":"https://images2.thanhnien.vn/zoom/600_315/528068263637045248/2026/10/16/photo-1792163091234-179216309190161478953-27-0-702-1080-crop-17921631057121165795895.jpeg","hot":false,"ph":{"c1":"#4a2731","c2":"#a04a58","ini":"TN","src":"Thanh Niên Thế Giới"}},{"id":"vn_world-44-m-ch-m-ch-n-trung-qu-c-c-th-l-y-m-u-sao","i":44,"title":"Mỹ chậm chân, Trung Quốc có thể lấy mẫu sao Hỏa trước","link":"https://lifestyle.zingnews.vn/my-cham-chan-trung-quoc-co-the-lay-mau-sao-hoa-truoc-post1689271.html","summary":"Mẫu đá trên sao Hỏa mang dấu hiệu sinh học tiềm năng có thể giúp giải đáp bí ẩn về sự sống ngoài Trái Đất, nhưng NASA chưa có kế hoạch rõ ràng để đưa nó về nghiên cứu.","source":"Zing Thế Giới","time":"11 giờ trước","thumbnail":"https://photo.znews.vn/w660/Uploaded/asfzyrwtys1/2026_10_13/pia26344_2500x_copy.jpg","hot":false,"ph":{"c1":"#123a4d","c2":"#1e6f8c","ini":"ZT","src":"Zing Thế Giới"}}]},{"key":"vn_weird","name":"🤩 Điều Hay & Lạ","short":"Hay & Lạ","emoji":"🤩","accent":"#fbbf24","articles":[{"id":"vn_weird-45-b-gi-o-d-c-si-t-l-m-ph-t-i-m-s-c-m-h-chu","i":45,"title":"Bộ Giáo dục siết lạm phát điểm số, cấm hạ chuẩn để tăng tỉ lệ tốt nghiệp giỏi, xuất sắc","link":"https://tuoitre.vn/bo-giao-duc-siet-lam-phat-diem-so-cam-ha-chuan-de-tang-ti-le-tot-nghiep-gioi-xuat-sac-100261017002811932.htm","summary":"Bộ Giáo dục yêu cầu các trường đại học đối chiếu điểm số với chuẩn đầu ra, phản hồi doanh nghiệp, không áp đặt tỉ lệ tốt nghiệp giỏi, xuất sắc.","source":"Tuổi Trẻ","time":"1 giờ trước","thumbnail":"https://cdn2.tuoitre.vn/thumb_w/1200/471584752817336320/2026/10/17/bang-tot-nghiep-ai-1792198415943988835551-35-0-995-1536-crop-17921984690982040266096.png","hot":false,"ph":{"c1":"#4a2731","c2":"#a04a58","ini":"TT","src":"Tuổi Trẻ"}},{"id":"vn_weird-46-iphone-duo-h-t-h-ng-nhi-u-n-c-t-b-y-gi-p","i":46,"title":"iPhone Duo hết hàng ở nhiều nước, đặt bây giờ phải chờ tới cuối tháng 1/2027","link":"https://tinhte.vn/thread/iphone-duo-het-hang-o-nhieu-nuoc-dat-bay-gio-phai-cho-toi-cuoi-thang-1-2027.4184789/","summary":"Apple vừa mở đặt trước iPhone Duo, mẫu iPhone gập đầu tiên, giá từ 1.999 USD. Chỉ sau vài phút, các phiên bản đều hết lượt giao sớm, và trên web Apple ở nhiều nước ngày giao hàng đã dời sang...","source":"Tinh Tế","time":"7 giờ trước","thumbnail":"https://photo2.tinhte.vn/data/attachment-files/2026/10/9114648_thumb-4x3.jpg","hot":false,"ph":{"c1":"#2b3a67","c2":"#4a5fc1","ini":"TT","src":"Tinh Tế"}},{"id":"vn_weird-47-iphone-duo-v-a-ch-y-h-ng-b-h-t-gi-5-000","i":47,"title":"iPhone Duo vừa cháy hàng đã bị hét giá 5.000 USD trên eBay","link":"https://tinhte.vn/thread/iphone-duo-vua-chay-hang-da-bi-het-gia-5-000-usd-tren-ebay.4184778/","summary":"iPhone Duo vừa cháy hàng đã bị hét giá 5.000 USD trên eBay iPhone Duo vừa mở đặt trước ngày 16/10 thì chỉ vài phút sau, ngày giao hàng trên Apple Store online ở Mỹ đã lùi sang năm 2027, mọi...","source":"Tinh Tế","time":"7 giờ trước","thumbnail":"https://photo2.tinhte.vn/data/attachment-files/2026/10/9114636_img1.jpg","hot":false,"ph":{"c1":"#2b3a67","c2":"#4a5fc1","ini":"TT","src":"Tinh Tế"}},{"id":"vn_weird-48-m-c-m-chip-huawei-h-ng-l-i-nvidia-c-n-34","i":48,"title":"Mỹ cấm chip, Huawei hưởng lợi: Nvidia còn 34% thị trường Trung Quốc","link":"https://genk.vn/my-cam-chip-huawei-huong-loi-nvidia-con-34-thi-truong-trung-quoc-16526101707564533.chn","summary":"Các lệnh cấm xuất khẩu của Mỹ vốn được dựng lên để kìm hãm năng lực trí tuệ nhân tạo của Trung Quốc, nhưng kết quả trên thị trường lại đang đi theo hướng ngược lại.","source":"GenK","time":"16 phút trước","thumbnail":"https://genk.mediacdn.vn/139269124445442048/2026/10/17/photo2026-10-1617-07-55-1792198569936-17921985705191504653699.jpg","hot":false,"ph":{"c1":"#3d2438","c2":"#8a4a6d","ini":"GE","src":"GenK"}},{"id":"vn_weird-49-gi-t-m-nh-v-i-gi-s-a-iphone-duo-ti-n-s-a","i":49,"title":"Giật mình với giá sửa iPhone Duo, tiền sửa cao nhất gần bằng mua iPhone 18 Pro Max mới","link":"https://genk.vn/giat-minh-voi-gia-sua-iphone-duo-tien-sua-cao-nhat-gan-bang-mua-iphone-18-pro-max-moi-165261017075512285.chn","summary":"Apple vừa công bố bảng giá sửa chữa ngoài bảo hành cho iPhone Duo. Mức phí cao nhất lên tới 1.499 USD (khoảng 39 triệu đồng), gần bằng giá một chiếc iPhone 18 Pro Max mới tại Việt Nam.","source":"GenK","time":"36 phút trước","thumbnail":"https://genk.mediacdn.vn/139269124445442048/2026/10/17/v6xbrenwybqxboitusf9wp-1200-80jpg-021929-1792198482471-17921984831952050156844.jpg","hot":false,"ph":{"c1":"#3d2438","c2":"#8a4a6d","ini":"GE","src":"GenK"}},{"id":"vn_weird-50-intel-c-cho-l-nh-n-lo-t-h-p-ng-c-chip-l","i":50,"title":"Intel được cho là đã nhận loạt hợp đồng đúc chip lớn từ Apple, NVIDIA, AMD và Google","link":"https://tinhte.vn/thread/intel-duoc-cho-la-da-nhan-loat-hop-dong-duc-chip-lon-tu-apple-nvidia-amd-va-google.4184532/","summary":"Intel được cho là đã nhận loạt hợp đồng đúc chip lớn từ Apple, NVIDIA, AMD và Google Báo cáo mới nhất từ các chuyên gia phân tích tại KeyBanc cho thấy mảng gia công bán dẫn Intel Foundry đang ghi...","source":"Tinh Tế","time":"7 giờ trước","thumbnail":"https://photo2.tinhte.vn/data/attachment-files/2026/10/9113976_Intel-14A-cover.jpg","hot":false,"ph":{"c1":"#2b3a67","c2":"#4a5fc1","ini":"TT","src":"Tinh Tế"}}]}];
+const WEATHER = {"ok": true, "city": "TP. Hồ Chí Minh", "temp": 29, "feels": 34, "temp_max": 31, "temp_min": 24, "humidity": 76, "wind": 6, "desc": "Nhiều mây", "emoji": "☁️", "rain_prob": 100, "rain_mm": 12.0, "will_rain": true, "tips": [["🌂", "Mang ô — xác suất mưa 100%"], ["🌞", "Thời tiết ấm, mặc thoáng mát"]]};
+const ARCHIVE = [{"date":"2026-10-17","label":"Thứ Bảy, 17/10/2026","total":50},{"date":"2026-10-16","label":"Thứ Sáu, 16/10/2026","total":50},{"date":"2026-10-15","label":"Thứ Năm, 15/10/2026","total":50},{"date":"2026-10-14","label":"Thứ Tư, 14/10/2026","total":50},{"date":"2026-10-13","label":"Thứ Ba, 13/10/2026","total":50},{"date":"2026-10-12","label":"Thứ Hai, 12/10/2026","total":48},{"date":"2026-10-11","label":"Chủ Nhật, 11/10/2026","total":49},{"date":"2026-10-10","label":"Thứ Bảy, 10/10/2026","total":50},{"date":"2026-10-09","label":"Thứ Sáu, 09/10/2026","total":50},{"date":"2026-10-08","label":"Thứ Năm, 08/10/2026","total":50},{"date":"2026-10-07","label":"Thứ Tư, 07/10/2026","total":50},{"date":"2026-10-06","label":"Thứ Ba, 06/10/2026","total":50},{"date":"2026-10-05","label":"Thứ Hai, 05/10/2026","total":50},{"date":"2026-10-04","label":"Chủ Nhật, 04/10/2026","total":50},{"date":"2026-10-03","label":"Thứ Bảy, 03/10/2026","total":48},{"date":"2026-10-02","label":"Thứ Sáu, 02/10/2026","total":50},{"date":"2026-10-01","label":"Thứ Năm, 01/10/2026","total":47},{"date":"2026-09-30","label":"Thứ Tư, 30/09/2026","total":47},{"date":"2026-09-29","label":"Thứ Ba, 29/09/2026","total":49},{"date":"2026-09-28","label":"Thứ Hai, 28/09/2026","total":50},{"date":"2026-09-27","label":"Chủ Nhật, 27/09/2026","total":50},{"date":"2026-09-26","label":"Thứ Bảy, 26/09/2026","total":50},{"date":"2026-09-25","label":"Thứ Sáu, 25/09/2026","total":50},{"date":"2026-09-24","label":"Thứ Năm, 24/09/2026","total":50},{"date":"2026-09-23","label":"Thứ Tư, 23/09/2026","total":50},{"date":"2026-09-22","label":"Thứ Ba, 22/09/2026","total":50},{"date":"2026-09-21","label":"Thứ Hai, 21/09/2026","total":50},{"date":"2026-09-20","label":"Chủ Nhật, 20/09/2026","total":50},{"date":"2026-09-19","label":"Thứ Bảy, 19/09/2026","total":49},{"date":"2026-09-18","label":"Thứ Sáu, 18/09/2026","total":50},{"date":"2026-09-17","label":"Thứ Năm, 17/09/2026","total":50},{"date":"2026-09-16","label":"Thứ Tư, 16/09/2026","total":50},{"date":"2026-09-15","label":"Thứ Ba, 15/09/2026","total":50},{"date":"2026-09-14","label":"Thứ Hai, 14/09/2026","total":50},{"date":"2026-09-13","label":"Chủ Nhật, 13/09/2026","total":50},{"date":"2026-09-12","label":"Thứ Bảy, 12/09/2026","total":50},{"date":"2026-09-11","label":"Thứ Sáu, 11/09/2026","total":50},{"date":"2026-09-10","label":"Thứ Năm, 10/09/2026","total":50},{"date":"2026-09-09","label":"Thứ Tư, 09/09/2026","total":50},{"date":"2026-09-08","label":"Thứ Ba, 08/09/2026","total":50},{"date":"2026-09-07","label":"Thứ Hai, 07/09/2026","total":50},{"date":"2026-09-06","label":"Chủ Nhật, 06/09/2026","total":50},{"date":"2026-09-05","label":"Thứ Bảy, 05/09/2026","total":50},{"date":"2026-09-04","label":"Thứ Sáu, 04/09/2026","total":50},{"date":"2026-09-03","label":"Thứ Năm, 03/09/2026","total":50},{"date":"2026-09-02","label":"Thứ Tư, 02/09/2026","total":50},{"date":"2026-09-01","label":"Thứ Ba, 01/09/2026","total":50},{"date":"2026-08-31","label":"Thứ Hai, 31/08/2026","total":50},{"date":"2026-08-30","label":"Chủ Nhật, 30/08/2026","total":50},{"date":"2026-08-29","label":"Thứ Bảy, 29/08/2026","total":50},{"date":"2026-08-28","label":"Thứ Sáu, 28/08/2026","total":50},{"date":"2026-08-27","label":"Thứ Năm, 27/08/2026","total":50},{"date":"2026-08-26","label":"Thứ Tư, 26/08/2026","total":50},{"date":"2026-08-25","label":"Thứ Ba, 25/08/2026","total":50},{"date":"2026-08-24","label":"Thứ Hai, 24/08/2026","total":50},{"date":"2026-08-23","label":"Chủ Nhật, 23/08/2026","total":50},{"date":"2026-08-22","label":"Thứ Bảy, 22/08/2026","total":50},{"date":"2026-08-21","label":"Thứ Sáu, 21/08/2026","total":50}];
+const BASE = "../";
+
+const el = (s,r)=> (r||document).querySelector(s);
+const els = (s,r)=> [...(r||document).querySelectorAll(s)];
+const esc = s => String(s==null?"":s).replace(/[&<>"']/g, c =>
+  ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+let state = { cat:"all", q:"", savedOnly:false, quick:false };
+const store = {
+  get(k,d){ try{ return JSON.parse(localStorage.getItem(k)) ?? d }catch(e){ return d } },
+  set(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)) }catch(e){} }
+};
+let marks = new Set(store.get("bn_marks",[]));
+
+function toast(msg){
+  const t = el("#toast"); t.textContent = msg; t.classList.add("on");
+  clearTimeout(t._x); t._x = setTimeout(()=>t.classList.remove("on"), 1900);
+}
+
+/* ── Giao diện sáng/tối ─────────────────────────────────── */
+(function(){
+  const saved = store.get("bn_theme", null);
+  const sys = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+  document.documentElement.dataset.theme = saved || sys;
+})();
+el("#theme").onclick = () => {
+  const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = next;
+  store.set("bn_theme", next);
+  el("#theme").textContent = next === "dark" ? "🌙" : "☀️";
+};
+el("#theme").textContent = document.documentElement.dataset.theme === "dark" ? "🌙" : "☀️";
+
+/* ── Thời tiết ──────────────────────────────────────────── */
+if (WEATHER && WEATHER.ok) {
+  el("#weather").innerHTML =
+    '<div class="weather"><div><div style="font-weight:700;font-size:15px">'+esc(WEATHER.city)+
+    '</div><div style="font-size:12.5px;color:var(--faint)">'+esc(WEATHER.desc)+
+    ' · Cảm giác '+esc(WEATHER.feels_like)+'° · Mưa '+esc(WEATHER.rain_prob)+'%</div></div>'+
+    '<div class="wtemp">'+esc(WEATHER.temp)+'°</div>'+
+    '<div class="wtips">'+(WEATHER.tips||[]).map(t=>'<span>'+esc(t)+'</span>').join("")+'</div></div>';
+}
+
+/* ── Chip lọc ───────────────────────────────────────────── */
+function buildChips(){
+  const c = el("#chips");
+  const all = '<button class="chip" data-cat="all" aria-pressed="true">🗞 Tất cả</button>';
+  c.innerHTML = all + DATA.map(s =>
+    '<button class="chip" data-cat="'+esc(s.key)+'" aria-pressed="false" style="--c:'+esc(s.accent)+'">'+
+    s.emoji+" "+esc(s.short)+'</button>').join("");
+  els(".chip", c).forEach(b => b.onclick = () => {
+    state.cat = b.dataset.cat;
+    els(".chip", c).forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+    render();
+  });
+}
+
+/* ── Ô ảnh ──────────────────────────────────────────────── */
+function thumbHTML(a){
+  if (a.thumbnail) {
+    return '<img src="'+esc(a.thumbnail)+'" alt="" loading="lazy" decoding="async" '+
+           'onerror="this.parentNode.innerHTML=window.__ph(this.dataset.i)" data-i="'+a.i+'">';
+  }
+  return window.__ph(a.i);
+}
+window.__PH = {};
+window.__ph = i => {
+  const p = window.__PH[i] || {c1:"#2b3a67",c2:"#4a5fc1",ini:"TT",src:""};
+  return '<div class="ph" style="background:linear-gradient(135deg,'+p.c1+','+p.c2+')">'+
+         '<div><b>'+esc(p.ini)+'</b><span>'+esc(p.src)+'</span></div></div>';
+};
+
+/* ── Thẻ tin ────────────────────────────────────────────── */
+function cardHTML(a, accent){
+  const on = marks.has(a.id);
+  return '<article class="card" style="--c:'+esc(accent)+'" data-id="'+esc(a.id)+'">'+
+    '<a class="thumb" href="'+esc(a.link)+'" target="_blank" rel="noopener">'+thumbHTML(a)+
+      (a.hot ? '<span class="badge">HOT</span>' : '')+'</a>'+
+    '<div class="cbody">'+
+      '<a href="'+esc(a.link)+'" target="_blank" rel="noopener"><h4>'+esc(a.title)+'</h4></a>'+
+      (a.summary ? '<div class="sum">'+esc(a.summary)+'</div>' : '')+
+      '<div class="meta"><span>'+esc(a.source)+'</span><span class="dot">·</span><span class="dot">'+esc(a.time)+'</span>'+
+        '<span class="acts">'+
+          '<button class="act mark" aria-pressed="'+on+'" title="Lưu để đọc sau">🔖</button>'+
+          '<button class="act tts" title="Nghe đọc">🔊</button>'+
+          '<button class="act share" title="Chia sẻ">↗</button>'+
+        '</span>'+
+      '</div>'+
+    '</div></article>';
+}
+
+/* ── Điểm tin 60 giây ───────────────────────────────────── */
+function buildDigest(){
+  const picks = [];
+  DATA.forEach(s => s.articles.slice(0,2).forEach(a => picks.push([a, s])));
+  const top = picks.slice(0, 8);
+  el("#digest").innerHTML =
+    '<h3>⚡ ĐIỂM TIN 60 GIÂY</h3><p>Bận thì đọc đúng phần này là đủ nắm ngày hôm nay</p>'+
+    '<div class="dlist">'+ top.map(([a,s],i) =>
+      '<div class="ditem" style="--c:'+esc(s.accent)+'"><span class="dnum">'+(i+1)+'</span>'+
+      '<div><a href="'+esc(a.link)+'" target="_blank" rel="noopener"><div class="t">'+esc(a.title)+'</div></a>'+
+      '<div class="s">'+s.emoji+" "+esc(a.source)+'</div></div></div>').join("")+
+    '</div>'+
+    '<button class="stat" id="readall" style="margin-top:14px">🔊 Nghe toàn bộ điểm tin</button>';
+  el("#readall").onclick = () => speak(top.map(([a]) => a.title).join(". "), el("#readall"));
+}
+
+/* ── Render chính ───────────────────────────────────────── */
+function match(a){
+  if (state.savedOnly && !marks.has(a.id)) return false;
+  if (!state.q) return true;
+  const q = state.q.toLowerCase();
+  return (a.title+" "+(a.summary||"")+" "+a.source).toLowerCase().includes(q);
+}
+function render(){
+  let shown = 0;
+  const out = DATA.filter(s => state.cat === "all" || s.key === state.cat).map(s => {
+    const list = s.articles.filter(match);
+    if (!list.length) return "";
+    shown += list.length;
+    return '<section class="secthead" style="--c:'+esc(s.accent)+'">'+
+             '<span class="bar"></span><h3>'+s.emoji+" "+esc(s.name)+'</h3>'+
+             '<span class="n">'+list.length+' tin</span></section>'+
+           '<div class="grid">'+list.map(a => cardHTML(a, s.accent)).join("")+'</div>';
+  }).join("");
+  el("#sections").innerHTML = out;
+  el("#empty").hidden = shown > 0;
+  wireCards();
+}
+
+function wireCards(){
+  els(".card").forEach(card => {
+    const id = card.dataset.id;
+    const a = INDEX[id];
+    el(".mark", card).onclick = e => {
+      e.preventDefault();
+      marks.has(id) ? marks.delete(id) : marks.add(id);
+      store.set("bn_marks", [...marks]);
+      e.currentTarget.setAttribute("aria-pressed", String(marks.has(id)));
+      toast(marks.has(id) ? "Đã lưu tin" : "Đã bỏ lưu");
+    };
+    el(".share", card).onclick = async e => {
+      e.preventDefault();
+      const payload = { title: a.title, url: a.link };
+      if (navigator.share) { try { await navigator.share(payload) } catch(_){} }
+      else { try { await navigator.clipboard.writeText(a.link); toast("Đã copy link") } catch(_){ toast("Không copy được") } }
+    };
+    el(".tts", card).onclick = e => {
+      e.preventDefault();
+      speak(a.title + ". " + (a.summary || ""), e.currentTarget);
+    };
+  });
+}
+
+/* ── Đọc to ─────────────────────────────────────────────── */
+let speakingBtn = null;
+function speak(text, btn){
+  if (!("speechSynthesis" in window)) { toast("Trình duyệt không hỗ trợ đọc to"); return }
+  if (speechSynthesis.speaking) {
+    speechSynthesis.cancel();
+    if (speakingBtn) speakingBtn.classList.remove("speaking");
+    if (speakingBtn === btn) { speakingBtn = null; return }
+  }
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = "vi-VN"; u.rate = 1.02;
+  u.onend = () => { btn.classList.remove("speaking"); speakingBtn = null };
+  btn.classList.add("speaking"); speakingBtn = btn;
+  speechSynthesis.speak(u);
+}
+
+/* ── Điều khiển ─────────────────────────────────────────── */
+let deb;
+el("#q").oninput = e => { clearTimeout(deb); deb = setTimeout(() => { state.q = e.target.value.trim(); render() }, 160) };
+el("#quick").onclick = e => {
+  state.quick = !state.quick;
+  document.body.classList.toggle("quick", state.quick);
+  e.currentTarget.setAttribute("aria-pressed", String(state.quick));
+};
+el("#saved").onclick = e => {
+  state.savedOnly = !state.savedOnly;
+  e.currentTarget.setAttribute("aria-pressed", String(state.savedOnly));
+  if (state.savedOnly && !marks.size) toast("Chưa lưu tin nào — bấm 🔖 trên thẻ tin");
+  render();
+};
+el("#arch").onclick = () => {
+  el("#days").innerHTML = ARCHIVE.length
+    ? ARCHIVE.map(d => '<a class="dayrow" href="'+BASE+'d/'+esc(d.date)+'.html"><span>'+
+        esc(d.label)+'</span><em>'+d.total+' tin</em></a>').join("")
+    : '<div style="color:var(--faint);font-size:13px">Chưa có bản lưu trữ nào.</div>';
+  el("#drawer").setAttribute("open","");
+};
+els("[data-close]").forEach(x => x.onclick = () => el("#drawer").removeAttribute("open"));
+addEventListener("keydown", e => {
+  if (e.key === "Escape") el("#drawer").removeAttribute("open");
+  if (e.key === "/" && document.activeElement !== el("#q")) { e.preventDefault(); el("#q").focus() }
+});
+
+/* ── Khởi động ──────────────────────────────────────────── */
+const INDEX = {};
+DATA.forEach(s => s.articles.forEach(a => {
+  INDEX[a.id] = a;
+  window.__PH[a.i] = a.ph;
+}));
+buildChips(); buildDigest(); render();
+
+if ("serviceWorker" in navigator) {
+  addEventListener("load", () => navigator.serviceWorker.register(BASE + "sw.js").catch(()=>{}));
+}
+</script>
+</body>
+</html>
